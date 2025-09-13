@@ -107,19 +107,17 @@ body {
 }
 
 /* ======================================= */
-/* CONTENT COM BLUR */
+/* CONTENT */
 /* ======================================= */
 .content {
     max-width: 100%;
     padding: 5rem 3rem 3rem 3rem;
-    background-color: rgba(255, 255, 255, 0.096);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
 
     font-size: 1.6rem;
     text-align: center;
     color: #222;
     line-height: 1.6;
+    place-items: center;
 }
 
 /* ======================================= */
