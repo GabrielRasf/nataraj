@@ -1,7 +1,8 @@
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu-ul");
 
-hamburger.addEventListener("click", () => {
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation(); // <--- impede que o document feche o menu
   menu.classList.toggle("active");
 });
 
@@ -14,10 +15,8 @@ menuItems.forEach(item => {
 });
 
 // Fecha o menu ao clicar fora dele
-document.addEventListener("click", (e) => {
-  if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-    menu.classList.remove("active");
-  }
+document.addEventListener("click", () => {
+  menu.classList.remove("active");
 });
 
 // Scroll suave ao clicar no logo
