@@ -142,15 +142,19 @@ body {
     padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.267);
+    outline: none;
 }
 
-.enviar {
+button.enviar {
     width: 60px;
     margin: 0 auto;
     cursor: pointer;
     padding: 1rem;
     outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.185);
+    border: none;
+    background-color: rgb(242, 242, 242);
+    color: #313131;
+    box-shadow: 0 5px 15px -5px #00000070;
     border-radius: 0.8rem;
 }
 
@@ -166,10 +170,29 @@ body {
     display: flex;
 }
 
+
+.textarea {
+    width: 20rem;
+    height: 10rem;
+
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+
+    font-size: 1.6rem;
+    resize: vertical;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+
+/* ICONS */
+
 .icon {
     width: 45px;
     height: 45px;
-    background: hsl(0, 0%, 95%);
+    background: rgb(242, 242, 242);
     margin: 10px;
     border-radius: 30%;
     color: #313131;
