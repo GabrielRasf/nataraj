@@ -1,0 +1,186 @@
+/* ======================================= */
+/* GLOBAL */
+/* ======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ======================================= */
+/* MENU COM GRID RESPONSIVO */
+/* ======================================= */
+.menu-section {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    padding: 1rem 2rem;
+    z-index: 10;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+/* logo fica sempre à esquerda */
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: default;
+}
+
+/* menu ocupa a coluna da direita */
+.menu-ul {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 3rem;
+    font-size: 1.5rem;
+}
+
+.menu-ul li {
+    font-weight: 700;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/* ======================================= */
+/* PARALLAX */
+/* ======================================= */
+.container-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* This makes the image responsive */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+/* fundo das seções */
+#parallax1 {
+    background-image: url('src/images/me.jpg');
+}
+
+#parallax2 {
+    background-image: url('src/images/massoterapia.jpg');
+}
+
+#parallax3 {
+    background-image: url('src/images/singingBowl.jpg');
+}
+
+#parallax4 {
+    background-image: url('src/images/ventosa.jpg');
+}
+
+#parallax5 {
+    background-image: url('src/images/perfil.jpg');
+}
+
+/* ======================================= */
+/* CONTENT COM BLUR */
+/* ======================================= */
+.content {
+    max-width: 100%;
+    padding: 5rem 3rem 3rem 3rem;
+    background-color: rgba(255, 255, 255, 0.096);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    font-size: 1.6rem;
+    text-align: center;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ======================================= */
+/* LISTA FORMAÇÃO MASSOTERAPIA */
+/* ======================================= */
+.formacao-massoterapia li {
+    text-align: start;
+}
+
+/* ======================================= */
+/* FORMULARIO */
+/* ======================================= */
+.form {
+    margin: 0 auto;
+    max-width: 450px;
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.form input {
+    border-radius: 0.8rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+}
+
+.enviar {
+    width: 60px;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 1rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    border-radius: 0.8rem;
+}
+
+/* ======================================= */
+/* RESPONSIVIDADE */
+/* ======================================= */
+@media (max-width: 660px) {
+
+    /* esconde menu e mostra hambúrguer */
+    .menu-ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        flex-direction: column;
+        gap: 1.5rem;
+        background: rgb(255, 255, 255);
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        justify-self: end;
+        display: block;
+    }
+}
