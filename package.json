@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "deploy": "vercel --prod"
   },
-  "dependencies": {
+  "devDependencies": {
     "vite": "^7.1.5"
   }
 }
