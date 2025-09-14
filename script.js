@@ -41,7 +41,7 @@ form.addEventListener('submit', async (e) => {
   const formData = Object.fromEntries(new FormData(form));
 
   try {
-    const response = await fetch('pages/api/contact', {
+    const response = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
