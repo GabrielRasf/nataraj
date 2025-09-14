@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nataraj - Massoterapia & Tantra</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-  <link rel="stylesheet" crossorigin href="/assets/index-CnjFXAnO.css">
+  <script type="module" crossorigin src="/assets/index-CAjhFU_W.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DM9PhLGB.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <li><a href="#massoterapia">Massoterapia</a></li>
                 <li><a href="#tantra">Tantra</a></li>
                 <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#contactForm">Contato</a></li>
             </ul>
         </section>
     </header>
@@ -82,34 +83,29 @@
             </div>
             <!-- Contato -->
             <section id="parallax5" class="parallax"></section>
-            <div id="contato" class="content">
+
+            <form id="contactForm" class="content">
                 <h3>Contato</h3>
                 <div class="form">
                     <input type="text" name="name" placeholder="Nome" required>
                     <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Telefone" pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}"
-                        title="Digite no formato 99-99999-9999" required>
-                    <input type="textarea" name="text" placeholder="Mensagem" required>
+                    <input type="tel" name="phone" placeholder="Telefone" pattern="[0-9]{10,11}"
+                        title="Digite apenas números, ex: 31998790443" required>
+
+                    <input class="textarea" type="textarea" name="message" placeholder="Mensagem" required>
                     <button type="submit" class="enviar">Enviar</button>
-                </div>
-                <div class="container">
-                    <a class="icon" href="mailto:gabrielrasf@hotmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a class="icon" href="https://wa.me/5531998790443">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
+            </form>
+            <div class="container">
+                <a class="icon" href="mailto:gabrielrasf@hotmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a class="icon" href="https://wa.me/5531998790443">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
             </div>
         </section>
-    </main>
-
-    <footer>
-
-    </footer>
-
-    <script src="script.js"></script>
-
+    </main>
 </body>
 
 </html>
