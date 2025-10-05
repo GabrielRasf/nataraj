@@ -9,6 +9,7 @@
     color: inherit;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html,
@@ -107,11 +108,48 @@ body {
 }
 
 /* ======================================= */
+/* MARQUEE */
+/* ======================================= */
+/* Container do marquee */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+}
+
+/* Conteúdo animado */
+.marquee-content {
+    display: inline-block;
+    padding-left: 50%;
+    font-size: 3.5rem;
+    font-weight: 200;
+    font-weight: bold; 
+    color: #333;
+    animation: scroll 90s linear infinite;
+}
+
+/* Animação do scroll */
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+/* ======================================= */
 /* CONTENT */
 /* ======================================= */
 .content {
     max-width: 100%;
-    padding: 5rem 3rem 3rem 3rem;
+    padding: 3rem;
 
     font-size: 1.6rem;
     text-align: center;
