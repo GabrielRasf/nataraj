@@ -119,12 +119,33 @@ body {
     line-height: 1.6;
     place-items: center;
 }
+.content p {
+    max-width: 960px;
+    text-align: justify;
+    
+}
+
+/* ======================================= */
+/* LISTA FORMAÇÃO MASSOTERAPIA */
+/* ======================================= */
+.blocos-de-cursos {
+    margin-top: 18px;
+    text-align: left;
+}
 
 /* ======================================= */
 /* LISTA FORMAÇÃO MASSOTERAPIA */
 /* ======================================= */
 .formacao-massoterapia li {
     text-align: start;
+}
+
+.div-massoterapia-li {
+    margin-top: 18px;
+}
+
+.div-massoterapia-massagens {
+
 }
 
 /* ======================================= */
@@ -156,6 +177,7 @@ button.enviar {
     color: #313131;
     box-shadow: 0 5px 15px -5px #00000070;
     border-radius: 0.8rem;
+    margin-top: 10px;
 }
 
 .enviar:hover {
@@ -184,6 +206,10 @@ button.enviar {
     word-wrap: break-word;
     box-sizing: border-box;
     overflow-wrap: break-word;
+
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 0.8rem;
+
 }
 
 
