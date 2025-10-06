@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -7,24 +7,23 @@
     <title>Nataraj - Massoterapia & Tantra</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
-
-
 
 <body>
     <!-- ================= HEADER ================= -->
     <header id="home">
         <section class="menu-section">
-            <h3 class="logo"><a href="#home">Nataraj</a></h3>
-            <div class="hamburger" id="hamburger">☰</div>
-            <ul id="menu" class="menu-ul">
-                <li><a href="#sobre-mim">Sobre mim</a></li>
-                <li><a href="#massoterapia">Massoterapia</a></li>
-                <li><a href="#tantra">Tantra</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#contactForm">Contato</a></li>
-            </ul>
+            <div class="alinhamento-logo-hamburger">
+                <h3 class="logo"><a href="#home">Nataraj</a></h3>
+                <div class="hamburger" id="hamburger">☰</div>
+                <ul id="menu" class="menu-ul">
+                    <li><a href="#sobre-mim">Sobre mim</a></li>
+                    <li><a href="#massoterapia">Massoterapia</a></li>
+                    <li><a href="#tantra">Tantra</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#contactForm">Contato</a></li>
+                </ul>
+            </div>
         </section>
     </header>
 
@@ -41,8 +40,7 @@
                     da minha vida. Aos 28, vivi em duas comunidades tântricas, experiências que aprofundaram minha
                     conexão com o autoconhecimento e o corpo. Ao retornar a Belo Horizonte, senti a necessidade de
                     expandir meus conhecimentos e ingressei em um curso de massoterapia, buscando integrar novas
-                    técnicas
-                    ao que já vinha desenvolvendo.
+                    técnicas ao que já vinha desenvolvendo.
                 </p>
                 <p>
                     Atualmente, atuo exclusivamente como massoterapeuta, unindo diferentes abordagens que aprendi ao
@@ -79,13 +77,14 @@
                         <li>2024 – Sacred Lomi Hawaii Retreat</li>
                     </ul>
                 </div>
-                <br>
-                <!-- Marquee Depoimentos -->
+
+                <!-- Marquee Depoimentos Massoterapia -->
                 <div class="marquee-container">
                     <div class="marquee-content">
                         <a href="#" class="openPopupMassoterapia">
                             Depoimentos · Depoimentos · Depoimentos · Depoimentos · Depoimentos · Depoimentos ·
-                            Depoimentos
+                            Depoimentos · Depoimentos · Depoimentos · Depoimentos · Depoimentos · Depoimentos ·
+                            Depoimentos · Depoimentos · Depoimentos · Depoimentos
                         </a>
                     </div>
                 </div>
@@ -98,14 +97,14 @@
                 <p>
                     Me aproximei do Tantra aos 19 anos, e essa jornada transformou completamente minha forma de viver
                     e me relacionar. Dez anos depois, mergulhei em uma imersão de seis meses em uma comuna tântrica,
-                    onde
-                    explorei diferentes práticas voltadas ao despertar sensorial e emocional.
+                    onde explorei diferentes práticas voltadas ao despertar sensorial e emocional.
                 </p>
                 <p>
                     Hoje, atuo oferecendo atendimentos individuais e para casais, além de ministrar cursos de
                     pompoarismo e Tantra, com o propósito de promover bem-estar, autoconhecimento e conexão genuína.
                 </p>
-                <br>
+
+                <!-- Marquee Depoimentos Tantra -->
                 <div class="marquee-container">
                     <div class="marquee-content">
                         <a href="#" class="openPopupTantra">
@@ -167,31 +166,34 @@
         </section>
     </main>
 
-    <!-- ================= POPUP DEPOIMENTOS ================= -->
-<!-- Popup Massoterapia -->
-<div id="popupMassoterapia" class="popup">
-    <div class="popup-content">
-        <span id="closePopupMassoterapia" class="close">&times;</span>
-        <div class="slider-container">
-            <button id="prevBtn" class="nav-btn">&#10094;</button>
-            <div class="slider">
-                <!-- Imagens carregadas via JS -->
+    <!-- ================= POPUPS ================= -->
+
+    <!-- Popup Massoterapia -->
+    <div id="popupMassoterapia" class="popup">
+        <div class="popup-content">
+            <span id="closePopupMassoterapia" class="close">&times;</span>
+            <div class="slider-container">
+                <button id="prevBtn" class="nav-btn">&#10094;</button>
+                <div class="slider"></div>
+                <button id="nextBtn" class="nav-btn">&#10095;</button>
             </div>
-            <button id="nextBtn" class="nav-btn">&#10095;</button>
         </div>
     </div>
-</div>
 
+    <!-- Popup Tantra -->
+    <div id="popupTantra" class="popup">
+        <div class="popup-content">
+            <span id="closePopupTantra" class="close">&times;</span>
+            <div class="slider-container">
+                <button id="prevTantra" class="nav-btn">&#10094;</button>
+                <div class="slider-tantra"></div>
+                <button id="nextTantra" class="nav-btn">&#10095;</button>
+            </div>
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-    <script type="module" src="/script.js"></script>
+    <!-- Scripts -->
+    <script src="./script.js"></script>
 </body>
 
 </html>
