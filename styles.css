@@ -88,23 +88,23 @@ body {
 
 /* fundo das seções */
 #parallax1 {
-    background-image: url('src/images/me.jpg');
+    background-image: url('src/images/parallax/me.jpg');
 }
 
 #parallax2 {
-    background-image: url('src/images/massoterapia.jpg');
+    background-image: url('src/images/parallax/massoterapia.jpg');
 }
 
 #parallax3 {
-    background-image: url('src/images/singingBowl.jpg');
+    background-image: url('src/images/parallax/singingBowl.jpg');
 }
 
 #parallax4 {
-    background-image: url('src/images/ventosa.jpg');
+    background-image: url('src/images/parallax/ventosa.jpg');
 }
 
 #parallax5 {
-    background-image: url('src/images/perfil.jpg');
+    background-image: url('src/images/parallax/perfil.jpg');
 }
 
 /* ======================================= */
@@ -144,6 +144,92 @@ body {
 .marquee-container:hover .marquee-content {
     animation-play-state: paused;
 }
+
+/* ======================================= */
+/* POPUP */
+/* ======================================= */
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    background-color: #ffffff81;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+/* Slider */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.slider {
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+/* Botões */
+.nav-btn {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    font-size: 3.5;
+}
+
+/* ======================================= */
+/* IMAGES */
+/* ======================================= */
+.images-depoimentos {
+    border-radius: 1rem;
+}
+
 /* ======================================= */
 /* CONTENT */
 /* ======================================= */
@@ -329,6 +415,7 @@ button.enviar {
 
     .menu-ul.active {
         display: flex;
+        flex-direction: ;
     }
 
     .hamburger {
