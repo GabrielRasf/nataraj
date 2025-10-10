@@ -79,7 +79,9 @@ if (form) {
   });
 }
 
-
+/* ======================================= */
+/* POPUP MASSOTERAPIA */
+/* ======================================= */
 /* ======================================= */
 /* POPUP MASSOTERAPIA */
 /* ======================================= */
@@ -165,28 +167,18 @@ const prevBtnTantra = document.getElementById('prevBtnTantra');
 const nextBtnTantra = document.getElementById('nextBtnTantra');
 
 if (popupTantra && closePopupTantra && openPopupTantraBtns.length > 0 && sliderTantra) {
+  const totalImagesTantra = 30; // número total de depoimentos Tantra
   let currentIndexTantra = 0;
+  const imagesTantra = [];
 
-  // Cria array de slides (vídeos primeiro, depois imagens)
-  const slidesTantra = [];
-
-  // Adiciona vídeos (exemplo: 5 vídeos de 31 a 35)
-
-  // Adiciona imagens (exemplo: 30 imagens de 1 a 30)
-  for (let i = 1; i <= 30; i++) {
-    slidesTantra.push({ type: 'img', src: `public/images/tantra/${i}.png` });
+  // Carregar imagens dinamicamente
+  for (let i = 1; i <= totalImagesTantra; i++) {
+    imagesTantra.push(`/images/depoimentos/tantra/${i}.png`);
   }
 
-  // Função para exibir slide atual
-  function showSlideTantra(index) {
-    const slide = slidesTantra[index];
-    if (slide.type === 'img') {
-      sliderTantra.innerHTML = `<img src="${slide.src}" alt="Depoimento Tantra ${index + 1}" loading="lazy">`;
-    } else if (slide.type === 'video') {
-      sliderTantra.innerHTML = `
-        <video src="${slide.src}" autoplay muted loop controls preload="metadata"></video>
-      `;
-    }
+  // Exibir imagem atual
+  function showImageTantra(index) {
+    sliderTantra.innerHTML = `<img src="${imagesTantra[index]}" alt="Depoimento Tantra ${index + 1}" loading="lazy">`;
   }
 
   // Abrir popup
@@ -194,13 +186,13 @@ if (popupTantra && closePopupTantra && openPopupTantraBtns.length > 0 && sliderT
     btn.addEventListener('click', e => {
       e.preventDefault();
       popupTantra.style.display = 'flex';
-      showSlideTantra(currentIndexTantra);
-      document.body.style.overflow = 'hidden';
+      showImageTantra(currentIndexTantra);
+      document.body.style.overflow = 'hidden'; // bloqueia rolagem de fundo
     });
   });
 
   // Fechar popup
-  closePopupTantra.addEventListener('click', closePopupTantraFn);
+  closePopupTantra.addEventListener('click', () => closePopupTantraFn());
   window.addEventListener('click', e => {
     if (e.target === popupTantra) closePopupTantraFn();
   });
@@ -210,16 +202,16 @@ if (popupTantra && closePopupTantra && openPopupTantraBtns.length > 0 && sliderT
     document.body.style.overflow = 'auto';
   }
 
-  // Navegação dos slides
+  // Navegação
   if (prevBtnTantra && nextBtnTantra) {
     prevBtnTantra.addEventListener('click', () => {
-      currentIndexTantra = (currentIndexTantra - 1 + slidesTantra.length) % slidesTantra.length;
-      showSlideTantra(currentIndexTantra);
+      currentIndexTantra = (currentIndexTantra - 1 + totalImagesTantra) % totalImagesTantra;
+      showImageTantra(currentIndexTantra);
     });
 
     nextBtnTantra.addEventListener('click', () => {
-      currentIndexTantra = (currentIndexTantra + 1) % slidesTantra.length;
-      showSlideTantra(currentIndexTantra);
+      currentIndexTantra = (currentIndexTantra + 1) % totalImagesTantra;
+      showImageTantra(currentIndexTantra);
     });
   }
 }
