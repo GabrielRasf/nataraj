@@ -100,12 +100,12 @@ if (popup && closePopup && openPopupBtns.length > 0 && slider) {
 
   // Adiciona vídeos 53 a 62 (10 vídeos)
   for (let i = 53; i <= 62; i++) {
-    slides.push({ type: 'video', src: `public/images/massoterapia/${i}.mp4` });
+    slides.push({ type: 'video', src: `/images/massoterapia/${i}.mp4` });
   }
 
   // Adiciona imagens 1 a 52
   for (let i = 1; i <= 52; i++) {
-    slides.push({ type: 'img', src: `public/images/massoterapia/${i}.png` });
+    slides.push({ type: 'img', src: `/images/massoterapia/${i}.png` });
   }
 
   // Função para exibir slide atual
@@ -173,7 +173,7 @@ if (popupTantra && closePopupTantra && openPopupTantraBtns.length > 0 && sliderT
 
   // Carregar imagens dinamicamente
   for (let i = 1; i <= totalImagesTantra; i++) {
-    imagesTantra.push(`/images/depoimentos/tantra/${i}.png`);
+    imagesTantra.push(`/images/tantra/${i}.png`);
   }
 
   // Exibir imagem atual
