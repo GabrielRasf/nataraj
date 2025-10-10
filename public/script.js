@@ -79,9 +79,7 @@ if (form) {
   });
 }
 
-/* ======================================= */
-/* POPUP MASSOTERAPIA */
-/* ======================================= */
+
 /* ======================================= */
 /* POPUP MASSOTERAPIA */
 /* ======================================= */
@@ -95,28 +93,24 @@ const nextBtn = document.getElementById('nextBtn');
 if (popup && closePopup && openPopupBtns.length > 0 && slider) {
   let currentIndex = 0;
 
-  // Cria array de slides (vídeos primeiro, depois imagens)
   const slides = [];
 
-  // Adiciona vídeos 53 a 62 (10 vídeos)
   for (let i = 53; i <= 62; i++) {
     slides.push({ type: 'video', src: `/images/massoterapia/${i}.mp4` });
   }
 
-  // Adiciona imagens 1 a 52
   for (let i = 1; i <= 52; i++) {
     slides.push({ type: 'img', src: `/images/massoterapia/${i}.png` });
   }
 
-  // Função para exibir slide atual
   function showSlide(index) {
     const slide = slides[index];
     if (slide.type === 'img') {
       slider.innerHTML = `<img src="${slide.src}" alt="Depoimento ${index + 1}" loading="lazy">`;
     } else if (slide.type === 'video') {
       slider.innerHTML = `
-        <video src="${slide.src}" autoplay muted loop controls preload="metadata"></video>
-      `;
+      <video src="${slide.src}" autoplay muted loop preload="metadata" controlsList="nodownload noremoteplayback" oncontextmenu="return false;"></video>
+ `;
     }
   }
 
@@ -167,11 +161,10 @@ const prevBtnTantra = document.getElementById('prevBtnTantra');
 const nextBtnTantra = document.getElementById('nextBtnTantra');
 
 if (popupTantra && closePopupTantra && openPopupTantraBtns.length > 0 && sliderTantra) {
-  const totalImagesTantra = 30; // número total de depoimentos Tantra
+  const totalImagesTantra = 30; 
   let currentIndexTantra = 0;
   const imagesTantra = [];
 
-  // Carregar imagens dinamicamente
   for (let i = 1; i <= totalImagesTantra; i++) {
     imagesTantra.push(`/images/tantra/${i}.png`);
   }
@@ -187,7 +180,7 @@ if (popupTantra && closePopupTantra && openPopupTantraBtns.length > 0 && sliderT
       e.preventDefault();
       popupTantra.style.display = 'flex';
       showImageTantra(currentIndexTantra);
-      document.body.style.overflow = 'hidden'; // bloqueia rolagem de fundo
+      document.body.style.overflow = 'hidden';
     });
   });
 
