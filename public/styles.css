@@ -134,6 +134,13 @@ body {
     padding: 4rem;
 }
 
+@supports (-webkit-touch-callout: none) {
+  /* Safari iOS */
+  .parallax {
+    background-attachment: scroll; /* evita distorção */
+  }
+}
+
 #parallax1 {
     background-image: url('/public/images/parallax/me.jpg');
 }
