@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "nataraj",
   "version": "1.0.0",
   "description": "",
@@ -11,13 +11,5 @@
   },
   "devDependencies": {
     "vite": "^7.1.5"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.2",
-    "next": "^15.5.3",
-    "nodemailer": "^7.0.6",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
   }
 }
